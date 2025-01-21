@@ -17,7 +17,7 @@ function Navbar() {
     }
   };
   return (
-    <nav className="bg-transparent text-white mt-4">
+    <nav className="bg-transparent text-white">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto sm:px-8  lg:px-40 p-4">
         <span className="self-center text-2xl font-bold whitespace-nowrap">
           Hamza<span className="text-[#00ff99]">.</span>
@@ -70,7 +70,6 @@ function Navbar() {
   id="navbar-default"
 >
 
-
           <ul className="font-medium flex flex-col p-4 mt-20 md:space-y-0 md:mt-0 md:flex-row md:space-x-8 md:border-0 ">
             <li>
               <Link
@@ -79,6 +78,15 @@ function Navbar() {
                 onClick={toggleMenu}
               >
                 Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/services"
+                className={`block  py-2 px-1 ${getActive("/services")}`}
+                onClick={toggleMenu}
+              >
+                Services
               </Link>
             </li>
             <li>
@@ -116,5 +124,4 @@ function Navbar() {
     </nav>
   );
 }
-
 export default Navbar;
