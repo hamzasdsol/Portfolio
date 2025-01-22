@@ -16,6 +16,15 @@ module.exports = {
         bold: 700,
         extraBold: 800,
       },
+      animation: {
+        'spin-slow': 'spin-slow 15s linear infinite',
+      },
+      keyframes: {
+        'spin-slow': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+      },
     },
   },
   plugins: [],

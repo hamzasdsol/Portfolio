@@ -1,8 +1,8 @@
 import React from "react";
-import Profile from "../assets/images/profile.jpg";
+import ProfileImage from "../assets/images/image.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-
+import { faGithub, faLinkedinIn,faYoutube,faTwitter } from "@fortawesome/free-brands-svg-icons";
+import "../App.css"
 function HeaderSection() {
     return (
         <section className="text-white flex flex-col-reverse md:flex-row justify-center sm:px-8 lg:pl-40 overflow-hidden">
@@ -10,9 +10,10 @@ function HeaderSection() {
                 <h2 className="text-sm uppercase tracking-widest text-gray-200">
                     Software Developer
                 </h2>
-                <h1 className="text-4xl md:text-7xl font-bold">
-                    Hello I’m <span className="text-[#00ff99]">Hamza</span>
-                </h1>
+            <h1 className="text-4xl md:text-7xl font-bold">Hello I’m<br/>
+            <span className="text-[#00ff99] typing-effect">Hamza</span>
+            </h1>
+
                 <p className="text-gray-200">
                     I excel at crafting elegant digital experiences and I am proficient
                     in various programming languages and technologies.
@@ -28,18 +29,26 @@ function HeaderSection() {
                         <a href="#github" className="hover:text-white w-10 h-10 flex justify-center items-center rounded-full bg-gray-800">
                             <FontAwesomeIcon icon={faGithub} size="lg" />
                         </a>
+                        <a href="#youtube" className="hover:text-white w-10 h-10 flex justify-center items-center rounded-full bg-gray-800">
+                            <FontAwesomeIcon icon={faYoutube} size="lg" />
+                        </a>
+                        <a href="#twitter" className="hover:text-white w-10 h-10 flex justify-center items-center rounded-full bg-gray-800">
+                            <FontAwesomeIcon icon={faTwitter} size="lg" />
+                        </a>
                     </div>
 
                 </div>
             </div>
+      <div className="relative md:w-1/2 flex justify-center mt-8 md:mb-0">
+      <div className="relative w-72 h-72 md:w-72 md:h-72 rounded-full">
+        <img
+          src={ProfileImage}
+          alt="Profile"
+          className="w-72 h-72 md:w-76 md:h-76 rounded-full object-cover"
+        />
+      </div>
+    </div>
 
-            <div className="relative md:w-1/2 flex justify-center mt-8 md:mb-0">
-                <img
-                    src={Profile}
-                    alt="Profile"
-                    className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover"
-                />
-            </div>
         </section>
     );
 }

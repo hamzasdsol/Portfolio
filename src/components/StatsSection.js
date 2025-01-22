@@ -5,7 +5,7 @@ function StatsSection() {
   const stats = [
     { value: 10, label: "Years of experience" },
     { value: 28, label: "Projects completed" },
-    { value:12, label: "Technologies mastered" },
+    { value:16, label: "Technologies mastered" },
     { value: 400, label: "Code commits" },
   ];
 
@@ -15,7 +15,7 @@ function StatsSection() {
         {stats.map((stat, index) => (
           <div key={index} className="space-y-2">
             <h3 className="text-4xl font-bold text-[#00ff99]">
-              <CountUp end={stat.value} duration={2} />
+              <CountUp end={stat.value} duration={3} />
             </h3>
             <p className="text-sm text-gray-400">{stat.label}</p>
           </div>

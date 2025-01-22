@@ -1,0 +1,28 @@
+.typing-effect {
+    display: inline-block;
+    overflow: hidden; 
+    white-space: nowrap;
+    animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+    border-right: 2px solid #00ff99; /* Mimics a caret for typing */
+  }
+  
+  /* Keyframes for typing */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%; 
+    }
+  }
+  
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      /* border-color: #00ff99; */
+    }
+  }
+  

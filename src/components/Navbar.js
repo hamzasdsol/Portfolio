@@ -6,7 +6,7 @@ function Navbar() {
   const location = useLocation();
 
   const getActive = (path) => {
-    return location.pathname === path ? "text-[#00ff99] underline decoration-2" : "";
+    return location.pathname === path ? "text-[#00ff99]" : "";
   };
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -110,8 +110,8 @@ function Navbar() {
             <li>
               <button className="bg-[#00ff99] hover:bg-[#00e187]     text-black rounded-3xl ">
                 <Link
-                  to="/hire"
-                  className={`block py-2 px-3  ${getActive("/hire")}`}
+                  to="/contact"
+                  className={`block py-2 px-3 text-black ${getActive("/contact")}`}
                   onClick={toggleMenu}
                 >
                   Hire me
